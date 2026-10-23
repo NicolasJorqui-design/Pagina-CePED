@@ -1,0 +1,94 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Solicitud de Afiliación - CePED{% endblock %}
+
+{% block content %}
+<section class="bg-light py-4 border-bottom">
+    <div class="container">
+        <h1 class="fw-bold text-ceped mb-1">Afiliación de Instituciones</h1>
+        <p class="text-muted mb-0">Suma tu centro de educación a distancia a la red provincial de CePED.</p>
+    </div>
+</section>
+
+<div class="container my-5">
+    <div class="row g-5">
+        <!-- Requisitos e Información -->
+        <div class="col-lg-5">
+            <div class="card border-0 bg-light p-4 shadow-sm h-100">
+                <h4 class="fw-bold text-ceped mb-3"><i class="bi bi-info-circle me-2"></i>Requisitos de Admisión</h4>
+                <p class="text-muted small">
+                    Para unirse a CePED, las instituciones interesadas deben presentar la documentación legal correspondiente 
+                    y comprometerse con el objeto social de la entidad:
+                </p>
+                <ul class="list-unstyled text-muted small">
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                        <span><strong>Documentación legal:</strong> Acta de constitución y autorización oficial para operar como centro educativo.</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                        <span><strong>Compromiso institucional:</strong> Aceptación de los estatutos y participación activa en las actividades.</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                        <span><strong>Aprobación:</strong> El alta de cada socio es evaluada y aprobada por la Asamblea General Ordinaria.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="col-lg-7">
+            <div class="card border-0 shadow-sm p-4">
+                <h3 class="fw-bold text-ceped mb-3">Formulario de Contacto y Solicitud</h3>
+                <p class="text-muted small mb-4">Completa los campos y el equipo se pondrá en contacto a la brevedad.</p>
+
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold small">Institución *</label>
+                            {{ form.institucion }}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold small">Entidad Propietaria</label>
+                            {{ form.entidad_propietaria }}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold small">Provincia *</label>
+                            {{ form.provincia }}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold small">Localidad *</label>
+                            {{ form.localidad }}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold small">Email *</label>
+                            {{ form.email }}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold small">Teléfono *</label>
+                            {{ form.telefono }}
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-semibold small">Responsable de contacto y cargo *</label>
+                            {{ form.responsable_contacto }}
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-semibold small">Motivo de la consulta *</label>
+                            {{ form.motivo }}
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-semibold small">Mensaje / Consulta</label>
+                            {{ form.mensaje }}
+                        </div>
+                    </div>
+                    <div class="mt-4 text-end">
+                        <button type="submit" class="btn btn-ceped btn-lg px-4 rounded-pill">Enviar Solicitud</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

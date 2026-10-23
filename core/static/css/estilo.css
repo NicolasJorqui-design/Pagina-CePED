@@ -1,0 +1,78 @@
+:root {
+    --ceped-dorado: #C5A059;
+    --ceped-dorado-oscuro: #9A7B3E;
+    --ceped-dorado-claro: #F4EAD3;
+    --ceped-blanco: #FFFFFF;
+    --ceped-gris-suave: #F8F9FA;
+    --ceped-texto: #2C2C2C;
+}
+
+body {
+    background-color: var(--ceped-blanco);
+    color: var(--ceped-texto);
+}
+
+/* Modificaciones de la Barra de Navegación */
+.navbar {
+    background-color: var(--ceped-blanco) !important;
+    border-bottom: 2px solid var(--ceped-dorado);
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.text-ceped {
+    color: var(--ceped-dorado-oscuro) !important;
+}
+
+/* Botones con estilo dorado */
+.btn-ceped {
+    background-color: var(--ceped-dorado);
+    color: var(--ceped-blanco);
+    border: 1px solid var(--ceped-dorado);
+    transition: all 0.3s ease;
+}
+
+.btn-ceped:hover {
+    background-color: var(--ceped-dorado-oscuro);
+    color: var(--ceped-blanco);
+}
+
+.btn-outline-ceped {
+    border: 2px solid var(--ceped-dorado);
+    color: var(--ceped-dorado-oscuro);
+    background-color: transparent;
+}
+
+.btn-outline-ceped:hover {
+    background-color: var(--ceped-dorado);
+    color: var(--ceped-blanco);
+}
+
+/* Hero Banner Institucional */
+.hero-banner {
+    background: linear-gradient(135deg, #FFFFFF 0%, var(--ceped-dorado-claro) 100%);
+    color: var(--ceped-texto);
+    border-bottom: 3px solid var(--ceped-dorado);
+}
+
+/* Tarjetas */
+.card-dorada {
+    border: 1px solid var(--ceped-dorado-claro);
+    background-color: var(--ceped-blanco);
+    transition: transform 0.2s;
+}
+
+.card-dorada:hover {
+    border-color: var(--ceped-dorado);
+    transform: translateY(-4px);
+}
+
+/* Footer elegante */
+footer {
+    background-color: #1F1F1F;
+    color: var(--ceped-blanco);
+    border-top: 4px solid var(--ceped-dorado);
+}

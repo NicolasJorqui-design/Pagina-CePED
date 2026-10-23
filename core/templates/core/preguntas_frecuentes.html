@@ -1,0 +1,95 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Preguntas Frecuentes - CePED{% endblock %}
+
+{% block content %}
+<section class="bg-light py-4 border-bottom">
+    <div class="container">
+        <h1 class="fw-bold text-ceped mb-1">Preguntas Frecuentes</h1>
+        <p class="text-muted mb-0">Respuestas a las dudas principales sobre la asociación y el proceso de afiliación.</p>
+    </div>
+</section>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="accordion shadow-sm" id="accordionFAQ">
+                
+                <!-- Pregunta 1 -->
+                <div class="accordion-item border-0 mb-3 rounded shadow-sm overflow-hidden">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fw-bold text-ceped" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            ¿Qué es CePED y cuál es su objetivo principal?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-muted">
+                            CePED es la <strong>Asociación Civil de Centros Privados de Educación a Distancia de Salta</strong>. 
+                            Su objetivo principal es brindar representación, fortalecer las competencias pedagógicas y tecnológicas, 
+                            promover la transparencia y garantizar el desarrollo de las instituciones asociadas ante organismos oficiales.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="accordion-item border-0 mb-3 rounded shadow-sm overflow-hidden">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed fw-bold text-ceped" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            ¿Qué requisitos debe cumplir una institución para afiliarse?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-muted">
+                            Se requiere presentar la <strong>documentación legal del centro educativo</strong> 
+                            (acta de constitución y autorización oficial para operar como institución educativa) 
+                            y asumir el compromiso formal de respetar los estatutos y participar activamente en las actividades de la asociación.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="accordion-item border-0 mb-3 rounded shadow-sm overflow-hidden">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed fw-bold text-ceped" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            ¿Cómo es el proceso de incorporación de un nuevo asociado?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-muted">
+                            La institución interesada debe completar el <strong>formulario de contacto y solicitud en línea</strong>. 
+                            Una vez recopilada la información, la incorporación o alta definitiva es tratada y resuelta por la 
+                            <strong>Asamblea General Ordinaria</strong> mediante resolución correspondiente.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="accordion-item border-0 mb-3 rounded shadow-sm overflow-hidden">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed fw-bold text-ceped" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            ¿Qué servicios y beneficios ofrece la asociación?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-muted">
+                            Ofrecemos asesoramiento institucional, capacitación continua en formato de webinars, congresos y 
+                            talleres para docentes y directivos, acceso a recursos educativos compartidos y 
+                            representación ante autoridades oficiales].
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Call to Action -->
+            <div class="card bg-ceped text-white text-center p-4 mt-5 rounded-3 border-0 shadow-sm">
+                <div class="card-body">
+                    <h4 class="fw-bold">¿Tienes más consultas sobre la afiliación?</h4>
+                    <p class="mb-3 text-light">Puedes enviarnos una solicitud de contacto y la Comisión Directiva responderá a la brevedad.</p>
+                    <a href="{% url 'solicitar_afiliacion' %}" class="btn btn-light text-ceped fw-bold px-4 rounded-pill">Enviar Formulario de Afiliación</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

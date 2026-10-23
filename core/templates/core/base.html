@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}CePED - Asociación Civil{% endblock %}</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- CSS Personalizado Blanco y Dorado -->
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+
+    <!-- Navegación Principal (Navbar estilo institucional) -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <<a class="navbar-brand text-ceped" href="{% url 'inicio' %}">
+                <i class="bi bi-bank me-2"></i>CePED
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link px-3" href="{% url 'inicio' %}">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="{% url 'quienes_somos' %}">Quiénes Somos</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="{% url 'preguntas_frecuentes' %}">Preguntas Frecuentes</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="{% url 'solicitar_afiliacion' %}">Afiliación</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="{% url 'lista_noticias' %}">Noticias y Eventos</a></li>
+                </ul>
+                <a href="{% url 'solicitar_afiliacion' %}" class="btn btn-ceped ms-lg-3 px-4 rounded-pill">Asociar mi Centro</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mensajes de Alerta/Éxito de Django -->
+    {% if messages %}
+    <div class="container mt-3">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+            {{ message }}
+            <button class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Contenido Dinámico -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer Institucional -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <h5 class="text-white fw-bold"><i class="bi bi-bank me-2"></i>CePED</h5>
+                    <p class="small text-muted mt-2">
+                        Asociación Civil de Centros Privados de Educación a Distancia de Salta.<br>
+                        Fundada en diciembre de 2025 para promover la calidad y representatividad de la educación a distancia.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-white fw-bold">Enlaces Rápidos</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="{% url 'quienes_somos' %}" class="text-decoration-none text-muted">Quiénes Somos</a></li>
+                        <li><a href="{% url 'solicitar_afiliacion' %}" class="text-decoration-none text-muted">Formulario de Afiliación</a></li>
+                        <li><a href="{% url 'preguntas_frecuentes' %}" class="text-decoration-none text-muted">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-white fw-bold">Contacto Institucional</h6>
+                    <p class="small text-muted mb-1"><i class="bi bi-geo-alt me-2"></i>Salta, Argentina</p>
+                    <p class="small text-muted mb-1"><i class="bi bi-envelope me-2"></i>contacto@ceped.org.ar</p>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <p class="small mb-0 text-center text-muted">&copy; 2026 CePED - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

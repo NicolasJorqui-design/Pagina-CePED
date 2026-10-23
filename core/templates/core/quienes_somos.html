@@ -1,0 +1,72 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Quiénes Somos - CePED{% endblock %}
+
+{% block content %}
+<section class="bg-light py-4 border-bottom">
+    <div class="container">
+        <h1 class="fw-bold text-ceped mb-1">Quiénes Somos</h1>
+        <p class="text-muted mb-0">Asociación Civil de Centros Privados de Educación a Distancia de Salta.</p>
+    </div>
+</section>
+
+<div class="container my-5">
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm p-4">
+                <h3 class="fw-bold text-ceped mb-3"><i class="bi bi-flag me-2"></i>Nuestra Historia</h3>
+                <p class="text-muted">
+                    CePED es una entidad constituida en diciembre de 2025 que agrupa a centros privados de educación a distancia en la provincia de Salta.
+                </p>
+                <p class="text-muted mb-0">
+                    Surgimos con el propósito de otorgar visibilidad, representatividad y un marco institucional sólido a las entidades que promueven la educación no presencial en la región.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm p-4">
+                <h3 class="fw-bold text-ceped mb-3"><i class="bi bi-person-badge me-2"></i>Categorías de Asociados</h3>
+                <ul class="list-group list-group-flush text-muted">
+                    <li class="list-group-item border-0 ps-0"><strong>Asociados Activos:</strong> Instituciones participantes con pleno derecho de voto en asambleas.</li>
+                    <li class="list-group-item border-0 ps-0"><strong>Asociados Vitalicios:</strong> Miembros reconocidos por su permanencia y trayectoria en la asociación.</li>
+                    <li class="list-group-item border-0 ps-0"><strong>Asociados Honorarios:</strong> Distinciones otorgadas por la Asamblea a personas o instituciones destacadas.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Organigrama / Comisión Directiva -->
+    <h3 class="fw-bold text-ceped mb-4 text-center">Comisión Directiva</h3>
+    <p class="text-muted text-center mb-5">La comisión es elegida por la Asamblea General Ordinaria por un período de dos años en funciones.</p>
+
+    <div class="row g-4 justify-content-center text-center">
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-3">
+                <div class="card-body">
+                    <i class="bi bi-person-circle fs-1 text-ceped mb-2"></i>
+                    <h5 class="fw-bold mb-1">Presidencia y Vicepresidencia</h5>
+                    <p class="text-muted small mb-0">Representación legal e institucional de la asociación.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-3">
+                <div class="card-body">
+                    <i class="bi bi-file-earmark-text fs-1 text-ceped mb-2"></i>
+                    <h5 class="fw-bold mb-1">Secretaría y Tesorería</h5>
+                    <p class="text-muted small mb-0">Gestión administrativa, actas y administración de fondos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-3">
+                <div class="card-body">
+                    <i class="bi bi-people fs-1 text-ceped mb-2"></i>
+                    <h5 class="fw-bold mb-1">Vocales Titulares y Suplentes</h5>
+                    <p class="text-muted small mb-0">Dos vocales titulares y un vocal suplente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
